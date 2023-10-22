@@ -1,0 +1,11 @@
+Criar classe Pessoa (Nome / Peso / Altura)​ - ok
+
+Ler dados do terminal​ - ok
+
+Tratar exceções​ - 
+
+Calcular IMC ​- ok
+
+Printar na tela o resultado do cálculo​ -ok
+
+Testes​​
