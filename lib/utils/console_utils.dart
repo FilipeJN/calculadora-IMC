@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:calulcadora_imc_app/calulcadora_imc.dart';
-import 'package:calulcadora_imc_app/pessoa.dart';
+import 'package:calulcadora_imc_app/models/pessoa.dart';
 
 class ConsoleUtils {
   static String lerString() {
@@ -59,5 +59,23 @@ class ConsoleUtils {
   void exibeIMC(Pessoa pessoa) {
     var imc = calculaIMC(pessoa.getAltura(), pessoa.getPeso());
     print("Seu IMC é: $imc");
+
+    if (imc < 16) {
+      print("Você está com $imc de IMC, MUITO ABAIXO DO PESO");
+    } else if (imc > 16 && imc < 17) {
+      print("Você está com $imc de IMC, MAGREZA MODERADA");
+    } else if (imc > 17 && imc < 18.5) {
+      print("Você está com $imc de IMC, MAGREZA LEVE");
+    } else if (imc > 18.5 && imc < 25) {
+      print("Você está com $imc de IMC, SAUDÁVEL");
+    } else if (imc > 25 && imc < 30) {
+      print("Você está com $imc de IMC, SOBREPESO");
+    } else if (imc > 30 && imc < 35) {
+      print("Você está com $imc de IMC, OBESIDADE GRAU I");
+    } else if (imc > 35 && imc < 40) {
+      print("Você está com $imc de IMC, OBESIDADE GRAU II");
+    } else if (imc >= 40) {
+      print("Você está com $imc de IMC, OBESIDADE GRAU III");
+    }
   }
 }
